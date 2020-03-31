@@ -35,15 +35,17 @@ Todo.prototype.render = function() {
 
 Todo.prototype.init = function() {
 
-    function initToken() {
+    const initToken = () => {
         const token = localStorage.getItem('token');
         if(token) {
             this.loginForm.classList.add('hidden');
             this.createForm.classList.remove('hidden');
+            this.render();
         } else {
             this.loginForm.classList.remove('hidden');
             this.createForm.classList.add('hidden');
         }
+
     }
 
     const url = 'https://todo.hillel.it/auth/login';
@@ -119,7 +121,6 @@ Todo.prototype.init = function() {
     });
 
     initToken();
-    this.render();
 };
 
 Todo.prototype.append = function(value) {
