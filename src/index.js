@@ -90,7 +90,6 @@ Todo.prototype.init = function() {
         const isEditBtn = e.target.tagName === 'BUTTON' && e.target.classList.contains('note__button--edit');
         const currentNoteId = e.target.closest('.note__item').dataset.id;
         const currentNoteItemValue = e.target.closest('.note__item').querySelector('.note__text').textContent;
-        console.log(currentNoteItemValue);
 
         if(isCompleteBtn) {
             this.complete(currentNoteId);
