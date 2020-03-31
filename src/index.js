@@ -45,8 +45,7 @@ Todo.prototype.init = function() {
             this.loginForm.classList.remove('hidden');
             this.createForm.classList.add('hidden');
         }
-
-    }
+    };
 
     const url = 'https://todo.hillel.it/auth/login';
 
